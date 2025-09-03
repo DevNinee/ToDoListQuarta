@@ -1,9 +1,16 @@
-#  ToDoList - Sistema de Gerenciamento de Tarefas - em Desenvolvimento 
+# 📋 ToDoList - Sistema de Gerenciamento de Tarefas - em Desenvolvimento
 
-##  Descrição
-Sistema simples de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa.
+## 🚀 Descrição
+Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. **Este módulo implementa apenas a funcionalidade de CRIAR TAREFAS**.
 
-## Arquitetura
+## 👥 **Equipe de Desenvolvimento**
+- **Erick Ferreira** -  **CRIAR TAREFA** (Este módulo)
+- **Fabiana Souza** -  Implementará outras funcionalidades
+- **Camilly Felix** -  Implementará outras funcionalidades  
+- **Anna Beatriz** -  Implementará outras funcionalidades
+- **Emanoel Alexandri** -  Implementará outras funcionalidades
+
+## 🏗️ Arquitetura
 O projeto segue uma arquitetura em camadas bem definida:
 
 ```
@@ -18,7 +25,7 @@ src/
 
 ### `ucb.aplicacao.AppToDoList`
 - **Responsabilidade**: Interface principal do usuário
-- **Funcionalidades**: Menu interativo, entrada de dados, exibição de resultados
+- **Funcionalidades**: Menu para criar tarefas e listar (para teste)
 
 ### `ucb.model.Tarefa`
 - **Responsabilidade**: Representa uma tarefa no sistema
@@ -26,23 +33,28 @@ src/
 
 ### `ucb.service.TarefaServico`
 - **Responsabilidade**: Lógica de negócio para gerenciamento de tarefas
-- **Funcionalidades**: CRUD de tarefas, contadores, validações
+- **Funcionalidades**: Criar tarefas, listar tarefas, contador
 
-## ✨ Funcionalidades
+## ✨ **Funcionalidades Implementadas (Erick)**
 
 -  **Criar Tarefa**: Adicionar nova tarefa com título e descrição
--  **Listar Tarefas**: Visualizar todas as tarefas com status
--  **Marcar como Completa**: Alterar status de uma tarefa
+-  **Listar Tarefas**: Visualizar tarefas criadas (para verificação)
+
+##  **Funcionalidades a Serem Implementadas (Outros Membros)**
+
+- **Marcar como Completa**: Alterar status de uma tarefa
 -  **Excluir Tarefa**: Remover tarefa do sistema
 -  **Estatísticas**: Contadores de tarefas totais e completas
+- **Buscar Tarefa**: Localizar tarefa específica
+-  **Editar Tarefa**: Modificar informações existentes
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Java**: Linguagem principal
-- **Java 8+**: Recursos como Streams e Optional
+- **Java 8+**: Recursos como Streams
 - **LocalDateTime**: Para timestamps das tarefas
 
-## 🚀 Como Executar
+##  Como Executar
 
 1. **Compilar o projeto**:
    ```bash
@@ -59,10 +71,8 @@ src/
 ```
 ===== GERENCIADOR DE TAREFAS =====
 1. Criar Tarefa
-2. Listar Tarefas
-3. Marcar Tarefa como Completa
-4. Excluir Tarefa
-5. Sair
+2. Listar Tarefas (para verificar se está funcionando)
+3. Sair
 Escolha uma opção: 1
 
 Título: Estudar Java
@@ -70,17 +80,24 @@ Descrição: Revisar conceitos de POO
  Tarefa criada com sucesso: Estudar Java
 ```
 
-## 🔧 Melhorias Futuras
+##  Melhorias Futuras
 
-- [ ] Persistência em banco de dados
-- [ ] Interface gráfica (GUI)
-- [ ] Categorização de tarefas
-- [ ] Sistema de prioridades
-- [ ] Notificações e lembretes
-- [ ] Exportação de relatórios
+- [ ] **Marcar como completa** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Excluir tarefa** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Editar tarefa** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Sistema de prioridades** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Categorização** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Persistência em banco** (Fabiana/Camilly/Anna/Emanoel)
 
-##  Desenvolvido por Erick  Ferreira,Fabiana Souza,Camilly Felix,Anna Beatriz,Emanoel Alexandri
-Projeto desenvolvido para estudo de arquitetura em camadas e boas práticas de programação Java.
+## 👨‍💻 **Responsabilidades por Módulo**
+
+| Funcionalidade | Responsável | Status |
+|----------------|-------------|---------|
+| **Criar Tarefa** | Erick Ferreira |  **Concluído** |
+| **Listar Tarefas** | Erick Ferreira |  **Concluído** |
+| **Marcar Completa** | A definir | ⏳ **Pendente** |
+| **Excluir Tarefa** | A definir | ⏳ **Pendente** |
+| **Editar Tarefa** | A definir | ⏳ **Pendente** |
 
 ---
-*Última atualização: Dezembro 2024*
+*Última atualização: setembro de 2025 - Módulo de Criar Tarefa implementado por Erick Ferreira*

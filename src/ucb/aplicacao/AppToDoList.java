@@ -13,10 +13,8 @@ public class AppToDoList {
         while (true) {
             System.out.println("\n===== GERENCIADOR DE TAREFAS =====");
             System.out.println("1. Criar Tarefa");
-            System.out.println("2. Listar Tarefas");
-            System.out.println("3. Marcar Tarefa como Completa");
-            System.out.println("4. Excluir Tarefa");
-            System.out.println("5. Sair");
+            System.out.println("2. Listar Tarefas (para verificar se está funcionando)");
+            System.out.println("3. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = entrada.nextInt();
@@ -39,9 +37,8 @@ public class AppToDoList {
                     } else {
                         System.out.println("\n📋 Lista de Tarefas:");
                         for (Tarefa t : tarefas) {
-                            String status = t.isCompleta() ? "✅" : "⏳";
                             System.out.println(
-                                status + " ID: " + t.getId() +
+                                "ID: " + t.getId() +
                                 " | Título: " + t.getTitulo() +
                                 " | Descrição: " + t.getDescricao() +
                                 " | Data: " + t.getDataAgora().format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
@@ -50,24 +47,6 @@ public class AppToDoList {
                     }
                 }
                 case 3 -> {
-                    System.out.print("Digite o ID da tarefa para marcar como completa: ");
-                    Long id = entrada.nextLong();
-                    if (servico.marcarComoCompleta(id)) {
-                        System.out.println("✅ Tarefa marcada como completa!");
-                    } else {
-                        System.out.println("❌ Tarefa não encontrada!");
-                    }
-                }
-                case 4 -> {
-                    System.out.print("Digite o ID da tarefa para excluir: ");
-                    Long idExcluir = entrada.nextLong();
-                    if (servico.excluirTarefa(idExcluir)) {
-                        System.out.println("🗑️ Tarefa excluída com sucesso!");
-                    } else {
-                        System.out.println("❌ Tarefa não encontrada!");
-                    }
-                }
-                case 5 -> {
                     System.out.println("👋 Saindo do sistema...");
                     entrada.close();
                     return;
