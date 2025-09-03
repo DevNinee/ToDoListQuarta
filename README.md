@@ -9,9 +9,9 @@ O projeto segue uma arquitetura em camadas bem definida:
 ```
 src/
 └── ucb/
-    ├── aplicacao/     # Camada de apresentação (interface do usuário)
+    ├── aplicacao/     # Camada de apresentação 
     ├── model/         # Camada de modelo (entidades)
-    └── service/       # Camada de serviço (lógica de negócio)
+    └── service/       # Camada de serviço 
 ```
 
 ##  Estrutura do Projeto
