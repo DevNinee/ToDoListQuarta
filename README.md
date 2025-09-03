@@ -14,7 +14,7 @@ src/
     └── service/       # Camada de serviço (lógica de negócio)
 ```
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ### `ucb.aplicacao.AppToDoList`
 - **Responsabilidade**: Interface principal do usuário
@@ -28,7 +28,7 @@ src/
 - **Responsabilidade**: Lógica de negócio para gerenciamento de tarefas
 - **Funcionalidades**: CRUD de tarefas, contadores, validações
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 -  **Criar Tarefa**: Adicionar nova tarefa com título e descrição
 -  **Listar Tarefas**: Visualizar todas as tarefas com status
@@ -36,13 +36,13 @@ src/
 -  **Excluir Tarefa**: Remover tarefa do sistema
 -  **Estatísticas**: Contadores de tarefas totais e completas
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Java**: Linguagem principal
 - **Java 8+**: Recursos como Streams e Optional
 - **LocalDateTime**: Para timestamps das tarefas
 
-## 🚀 Como Executar
+##  Como Executar
 
 1. **Compilar o projeto**:
    ```bash
@@ -54,7 +54,7 @@ src/
    java -cp bin ucb.aplicacao.AppToDoList
    ```
 
-##  Exemplo de Uso
+## Exemplo de Uso
 
 ```
 ===== GERENCIADOR DE TAREFAS =====
@@ -70,17 +70,10 @@ Descrição: Revisar conceitos de POO
  Tarefa criada com sucesso: Estudar Java
 ```
 
-## 🔧 Melhorias Futuras
+##  Melhorias Futuras
 
-- [ ] Persistência em banco de dados
-- [ ] Interface gráfica (GUI)
-- [ ] Categorização de tarefas
-- [ ] Sistema de prioridades
-- [ ] Notificações e lembretes
-- [ ] Exportação de relatórios
 
 ##  Desenvolvido por Erick  Ferreira,Fabiana Souza,Camilly Felix,Anna Beatriz,Emanoel Alexandri
 Projeto desenvolvido para estudo de arquitetura em camadas e boas práticas de programação Java.
 
 ---
-*Última atualização: Dezembro 2024*
