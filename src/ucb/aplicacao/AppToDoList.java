@@ -30,16 +30,16 @@ public class AppToDoList {
                     String descricao = entrada.nextLine();
 
                     Tarefa nova = servico.criarTarefa(titulo, descricao);
-                    System.out.println("✅ Tarefa criada com sucesso: " + nova.getTitulo());
+                    System.out.println(" Tarefa criada com sucesso: " + nova.getTitulo());
                 }
                 case 2 -> {
                     List<Tarefa> tarefas = servico.listarTarefas();
                     if (tarefas.isEmpty()) {
-                        System.out.println("⚠️ Nenhuma tarefa cadastrada.");
+                        System.out.println(" Nenhuma tarefa cadastrada.");
                     } else {
-                        System.out.println("\n📋 Lista de Tarefas:");
+                        System.out.println("\n Lista de Tarefas:");
                         for (Tarefa t : tarefas) {
-                            String status = t.isCompleta() ? "✅" : "⏳";
+                            String status = t.isCompleta() ? "" : "";
                             System.out.println(
                                 status + " ID: " + t.getId() +
                                 " | Título: " + t.getTitulo() +
@@ -53,9 +53,9 @@ public class AppToDoList {
                     System.out.print("Digite o ID da tarefa para marcar como completa: ");
                     Long id = entrada.nextLong();
                     if (servico.marcarComoCompleta(id)) {
-                        System.out.println("✅ Tarefa marcada como completa!");
+                        System.out.println(" Tarefa marcada como completa!");
                     } else {
-                        System.out.println("❌ Tarefa não encontrada!");
+                        System.out.println(" Tarefa não encontrada!");
                     }
                 }
                 case 4 -> {
@@ -64,15 +64,15 @@ public class AppToDoList {
                     if (servico.excluirTarefa(idExcluir)) {
                         System.out.println("🗑️ Tarefa excluída com sucesso!");
                     } else {
-                        System.out.println("❌ Tarefa não encontrada!");
+                        System.out.println(" Tarefa não encontrada!");
                     }
                 }
                 case 5 -> {
-                    System.out.println("👋 Saindo do sistema...");
+                    System.out.println(" Saindo do sistema...");
                     entrada.close();
                     return;
                 }
-                default -> System.out.println("❌ Opção inválida! Tente novamente.");
+                default -> System.out.println(" Opção inválida! Tente novamente.");
             }
         }
     }
