@@ -16,9 +16,9 @@ O projeto segue uma arquitetura em camadas bem definida:
 ```
 src/
 └── ucb/
-    ├── aplicacao/     # Camada de apresentação (interface do usuário)
+    ├── aplicacao/     # Camada de apresentação 
     ├── model/         # Camada de modelo (entidades)
-    └── service/       # Camada de serviço (lógica de negócio)
+    └── service/       # Camada de serviço 
 ```
 
 ## 📁 Estrutura do Projeto
@@ -40,7 +40,7 @@ src/
 -  **Criar Tarefa**: Adicionar nova tarefa com título e descrição
 -  **Listar Tarefas**: Visualizar tarefas criadas (para verificação)
 
-##  **Funcionalidades a Serem Implementadas (Outros Membros)**
+## 🔄 **Funcionalidades a Serem Implementadas (Outros Membros)**
 
 - **Marcar como Completa**: Alterar status de uma tarefa
 -  **Excluir Tarefa**: Remover tarefa do sistema
@@ -48,13 +48,13 @@ src/
 - **Buscar Tarefa**: Localizar tarefa específica
 -  **Editar Tarefa**: Modificar informações existentes
 
-##  Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - **Java**: Linguagem principal
 - **Java 8+**: Recursos como Streams
 - **LocalDateTime**: Para timestamps das tarefas
 
-##  Como Executar
+## 🚀 Como Executar
 
 1. **Compilar o projeto**:
    ```bash
@@ -66,7 +66,7 @@ src/
    java -cp bin ucb.aplicacao.AppToDoList
    ```
 
-##  Exemplo de Uso
+## 📋 Exemplo de Uso
 
 ```
 ===== GERENCIADOR DE TAREFAS =====
@@ -80,7 +80,7 @@ Descrição: Revisar conceitos de POO
  Tarefa criada com sucesso: Estudar Java
 ```
 
-##  Melhorias Futuras
+## 🔧 Melhorias Futuras
 
 - [ ] **Marcar como completa** (Fabiana/Camilly/Anna/Emanoel)
 - [ ] **Excluir tarefa** (Fabiana/Camilly/Anna/Emanoel)
