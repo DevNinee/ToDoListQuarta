@@ -1,16 +1,16 @@
-# 📋 ToDoList - Sistema de Gerenciamento de Tarefas - em Desenvolvimento
+#  ToDoList - Sistema de Gerenciamento de Tarefas - em Desenvolvimento
 
-## 🚀 Descrição
+##  Descrição
 Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. **Este módulo implementa apenas a funcionalidade de CRIAR TAREFAS**.
 
-## 👥 **Equipe de Desenvolvimento**
+##  **Equipe de Desenvolvimento**
 - **Erick Ferreira** -  **CRIAR TAREFA** (Este módulo)
 - **Fabiana Souza** -  Implementará outras funcionalidades
 - **Camilly Felix** -  Implementará outras funcionalidades  
 - **Anna Beatriz** -  Implementará outras funcionalidades
 - **Emanoel Alexandri** -  Implementará outras funcionalidades
 
-## 🏗️ Arquitetura
+##  Arquitetura
 O projeto segue uma arquitetura em camadas bem definida:
 
 ```
@@ -21,7 +21,7 @@ src/
     └── service/       # Camada de serviço 
 ```
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ### `ucb.aplicacao.AppToDoList`
 - **Responsabilidade**: Interface principal do usuário
@@ -35,12 +35,12 @@ src/
 - **Responsabilidade**: Lógica de negócio para gerenciamento de tarefas
 - **Funcionalidades**: Criar tarefas, listar tarefas, contador
 
-## ✨ **Funcionalidades Implementadas (Erick)**
+##  **Funcionalidades Implementadas (Erick)**
 
 -  **Criar Tarefa**: Adicionar nova tarefa com título e descrição
 -  **Listar Tarefas**: Visualizar tarefas criadas (para verificação)
 
-## 🔄 **Funcionalidades a Serem Implementadas (Outros Membros)**
+##  **Funcionalidades a Serem Implementadas (Outros Membros)**
 
 - **Marcar como Completa**: Alterar status de uma tarefa
 -  **Excluir Tarefa**: Remover tarefa do sistema
@@ -54,7 +54,7 @@ src/
 - **Java 8+**: Recursos como Streams
 - **LocalDateTime**: Para timestamps das tarefas
 
-## 🚀 Como Executar
+##  Como Executar
 
 1. **Compilar o projeto**:
    ```bash
@@ -66,7 +66,7 @@ src/
    java -cp bin ucb.aplicacao.AppToDoList
    ```
 
-## 📋 Exemplo de Uso
+##  Exemplo de Uso
 
 ```
 ===== GERENCIADOR DE TAREFAS =====
@@ -80,24 +80,24 @@ Descrição: Revisar conceitos de POO
  Tarefa criada com sucesso: Estudar Java
 ```
 
-## 🔧 Melhorias Futuras
+##  Melhorias Futuras
 
-- [ ] **Marcar como completa** (Fabiana/Camilly/Anna/Emanoel)
-- [ ] **Excluir tarefa** (Fabiana/Camilly/Anna/Emanoel)
-- [ ] **Editar tarefa** (Fabiana/Camilly/Anna/Emanoel)
-- [ ] **Sistema de prioridades** (Fabiana/Camilly/Anna/Emanoel)
-- [ ] **Categorização** (Fabiana/Camilly/Anna/Emanoel)
-- [ ] **Persistência em banco** (Fabiana/Camilly/Anna/Emanoel)
+- [ ] **Marcar como completa** (Fabiana)
+- [ ] **Excluir tarefa** (Camilly)
+- [ ] **Editar tarefa** (Anna)
+- [ ] **Sistema de prioridades** (Emanoel)
+- [ ] **Categorização** (Erick)
+- [ ] **Persistência em banco** (Erick/Fabiana/Camilly/Anna/Emanoel)
 
-## 👨‍💻 **Responsabilidades por Módulo**
+##  **Responsabilidades por Módulo**
 
 | Funcionalidade | Responsável | Status |
 |----------------|-------------|---------|
 | **Criar Tarefa** | Erick Ferreira |  **Concluído** |
 | **Listar Tarefas** | Erick Ferreira |  **Concluído** |
-| **Marcar Completa** | A definir | ⏳ **Pendente** |
-| **Excluir Tarefa** | A definir | ⏳ **Pendente** |
-| **Editar Tarefa** | A definir | ⏳ **Pendente** |
+| **Marcar Completa** | Fabiana | ⏳ **Pendente** |
+| **Excluir Tarefa** | Camilly | ⏳ **Pendente** |
+| **Editar Tarefa** | Anna | ⏳ **Pendente** |
 
 ---
 *Última atualização: setembro de 2025 - Módulo de Criar Tarefa implementado por Erick Ferreira*
