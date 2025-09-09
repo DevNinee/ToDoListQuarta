@@ -46,10 +46,10 @@ Funcionalidades a Serem Implementadas (Outros Membros)
 
 Como Executar
 ```
-1. Compilar o projeto:    javac -d bin src/ucb/**/*.java
-2.   
-3. Executar a aplicação:    java -cp bin ucb.aplicacao.AppToDoList
-4.   
+1. Compilar o projeto:javac -d bin src/ucb/**/*.java
+2. 
+3. Executar a aplicação:java -cp bin ucb.aplicacao.AppToDoList
+4. 
 ```
 Exemplo de Uso
 ```

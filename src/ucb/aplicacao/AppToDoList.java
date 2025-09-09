@@ -28,14 +28,14 @@ public class AppToDoList {
                     String descricao = entrada.nextLine();
 
                     Tarefa nova = servico.criarTarefa(titulo, descricao);
-                    System.out.println("✅ Tarefa criada com sucesso: " + nova.getTitulo());
+                    System.out.println("Tarefa criada com sucesso: " + nova.getTitulo());
                 }
                 case 2 -> {
                     List<Tarefa> tarefas = servico.listarTarefas();
                     if (tarefas.isEmpty()) {
-                        System.out.println("⚠️ Nenhuma tarefa cadastrada.");
+                        System.out.println("Nenhuma tarefa cadastrada.");
                     } else {
-                        System.out.println("\n📋 Lista de Tarefas:");
+                        System.out.println("\nLista de Tarefas:");
                         for (Tarefa t : tarefas) {
                             System.out.println(
                                 "ID: " + t.getId() +
@@ -47,11 +47,11 @@ public class AppToDoList {
                     }
                 }
                 case 3 -> {
-                    System.out.println("👋 Saindo do sistema...");
+                    System.out.println("Saindo do sistema...");
                     entrada.close();
                     return;
                 }
-                default -> System.out.println("❌ Opção inválida! Tente novamente.");
+                default -> System.out.println("Opção inválida! Tente novamente.");
             }
         }
     }
