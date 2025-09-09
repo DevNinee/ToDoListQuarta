@@ -3,7 +3,7 @@ ToDoList - Sistema de Gerenciamento de Tarefas - em Desenvolvimento
 
 Equipe de Desenvolvimento
 * Erick Ferreira - Criar Tarefa
-* Emanoel Alexandri - Listar Tarefas
+* Emanoel Alexandri - Implementará outras funcionalidades
 * Fabiana Souza - Implementará outras funcionalidades
 * Camile Felix - Implementará outras funcionalidades
 * Anna Beatriz - Implementará outras funcionalidades
@@ -30,7 +30,7 @@ ucb.service.TarefaServico
 
 Funcionalidades Implementadas
 * Criar Tarefa: Adicionar nova tarefa com título e descrição (Erick)
-* Listar Tarefas: Visualizar tarefas criadas (Emanoel)
+* Listar Tarefas: Visualizar tarefas criadas (Erick)
 
 Funcionalidades a Serem Implementadas (Outros Membros)
 * Marcar como Completa: Alterar status de uma tarefa
