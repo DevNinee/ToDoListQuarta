@@ -13,7 +13,7 @@ public class AppToDoList {
         while (true) {
             System.out.println("\n===== GERENCIADOR DE TAREFAS =====");
             System.out.println("1. Criar Tarefa");
-            System.out.println("2. Listar Tarefas (para verificar se está funcionando)");
+            System.out.println("2. Listar Tarefas");
             System.out.println("3. Sair");
             System.out.print("Escolha uma opção: ");
 

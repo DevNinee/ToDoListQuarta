@@ -2,6 +2,7 @@ package ucb.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import ucb.model.Tarefa;
 
 public class TarefaServico {
@@ -19,6 +20,33 @@ public class TarefaServico {
     // Listar tarefas
     public List<Tarefa> listarTarefas() {
         return new ArrayList<>(tarefas); // retorna uma cópia para evitar modificações externas
+    }
+
+    // Atualizar tarefa (CRUD - Update)
+    public boolean atualizarTarefa(Long id, String novoTitulo, String novaDescricao) {
+        Optional<Tarefa> tarefa = tarefas.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst();
+        
+        if (tarefa.isPresent()) {
+            Tarefa t = tarefa.get();
+            t.setTitulo(novoTitulo);
+            t.setDescricao(novaDescricao);
+            return true;
+        }
+        return false;
+    }
+
+    // Remover tarefa (CRUD - Delete)
+    public boolean removerTarefa(Long id) {
+        return tarefas.removeIf(t -> t.getId().equals(id));
+    }
+
+    // Buscar tarefa por ID
+    public Optional<Tarefa> buscarPorId(Long id) {
+        return tarefas.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst();
     }
 
     // Método para verificar se a funcionalidade está funcionando
