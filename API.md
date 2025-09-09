@@ -1,6 +1,6 @@
-# 📚 Documentação da API - ToDoList
+# Documentação da API - ToDoList
 
-## 🔧 Classe TarefaServico
+## Classe TarefaServico
 
 ### Métodos Disponíveis
 
@@ -75,7 +75,7 @@
   System.out.println("Tarefas completas: " + completas);
   ```
 
-## 🏗️ Padrões de Design Utilizados
+## Padrões de Design Utilizados
 
 ### 1. **Service Layer Pattern**
 - Separação clara entre lógica de negócio e apresentação
@@ -89,7 +89,7 @@
 - Retorno de cópias das listas para evitar modificações externas
 - Uso de Streams para operações funcionais
 
-## 🔮 Extensões Recomendadas
+## Extensões Recomendadas
 
 ### Persistência
 ```java
