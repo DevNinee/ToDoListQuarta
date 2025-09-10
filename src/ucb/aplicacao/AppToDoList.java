@@ -14,7 +14,8 @@ public class AppToDoList {
             System.out.println("\n===== GERENCIADOR DE TAREFAS =====");
             System.out.println("1. Criar Tarefa");
             System.out.println("2. Listar Tarefas");
-            System.out.println("3. Sair");
+            System.out.println("3. Marcar como Completa");
+            System.out.println("4. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = entrada.nextInt();
@@ -40,13 +41,23 @@ public class AppToDoList {
                             System.out.println(
                                 "ID: " + t.getId() +
                                 " | Título: " + t.getTitulo() +
-                                " | Descrição: " + t.getDescricao() +
+                                " | Status: " + (t.isCompleta() ? "Completa" : "Pendente") +
                                 " | Data: " + t.getDataAgora().format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
                             );
                         }
                     }
                 }
                 case 3 -> {
+                    System.out.print("Digite o ID da tarefa para marcar como completa: ");
+                    Long idCompleta = entrada.nextLong();
+
+                    if (servico.marcarComoCompleta(idCompleta)) {
+                        System.out.println("Tarefa marcada como completa!");
+                    } else {
+                        System.out.println("Tarefa não encontrada!");
+                    }
+                }
+                case 4 -> {
                     System.out.println("Saindo do sistema...");
                     entrada.close();
                     return;

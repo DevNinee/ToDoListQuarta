@@ -49,6 +49,19 @@ public class TarefaServico {
                 .findFirst();
     }
 
+    // Marcar tarefa como completa
+    public boolean marcarComoCompleta(Long id) {
+        Optional<Tarefa> tarefa = tarefas.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst();
+
+        if (tarefa.isPresent()) {
+            tarefa.get().setCompleta(true);
+            return true;
+        }
+        return false;
+    }
+
     // Método para verificar se a funcionalidade está funcionando
     public int totalTarefas() {
         return tarefas.size();
