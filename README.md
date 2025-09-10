@@ -67,6 +67,8 @@ src/
 - Confirmação de exclusão
 
 ### **Buscar Tarefa por ID** (Emanoel Alexandri)
+- Implementar método buscarPorId no TarefaServico
+- Adicionar opção no menu CLI
 - Localizar tarefa específica pelo ID
 - Exibição detalhada da tarefa encontrada
 - Validação de ID existente

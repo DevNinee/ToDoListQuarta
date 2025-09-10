@@ -41,6 +41,7 @@ public class AppToDoList {
                             System.out.println(
                                 "ID: " + t.getId() +
                                 " | Título: " + t.getTitulo() +
+
                                 " | Status: " + (t.isCompleta() ? "Completa" : "Pendente") +
                                 " | Data: " + t.getDataAgora().format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"))
                             );

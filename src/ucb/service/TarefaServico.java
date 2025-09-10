@@ -42,13 +42,6 @@ public class TarefaServico {
         return tarefas.removeIf(t -> t.getId().equals(id));
     }
 
-    // Buscar tarefa por ID
-    public Optional<Tarefa> buscarPorId(Long id) {
-        return tarefas.stream()
-                .filter(t -> t.getId().equals(id))
-                .findFirst();
-    }
-
     // Marcar tarefa como completa
     public boolean marcarComoCompleta(Long id) {
         Optional<Tarefa> tarefa = tarefas.stream()
