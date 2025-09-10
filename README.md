@@ -85,7 +85,7 @@ src/
 - Migração de dados em memória
 - Backup e recuperação
 
-## 🛠️ **Tecnologias Utilizadas**
+##  **Tecnologias Utilizadas**
 
 - **Java**: Linguagem principal
 - **Java 8+**: Recursos como Streams e Optional
@@ -183,7 +183,7 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 2. Verifique mensagem de erro
 3. Teste com IDs inválidos
 
-## 📊 **Status do Projeto**
+##  **Status do Projeto**
 
 - **Funcionalidades Implementadas**: 3/8
 - **Código Funcionando**: 
