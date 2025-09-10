@@ -1,19 +1,54 @@
-# Arquivos compilados
+# ===========================================
+# ARQUIVOS COMPILADOS DO JAVA
+# ===========================================
+# Diretório onde ficam os arquivos .class compilados
 bin/
+# Arquivos .class individuais
 *.class
 
-# Arquivos do sistema
+# ===========================================
+# ARQUIVOS DO SISTEMA OPERACIONAL
+# ===========================================
+# Arquivo de metadados do macOS
 .DS_Store
+# Arquivo de cache do Windows
 Thumbs.db
 
-# IDEs
+# ===========================================
+# ARQUIVOS DE IDES E EDITORES
+# ===========================================
+# Configurações do Visual Studio Code
 .vscode/
+# Configurações do IntelliJ IDEA
 .idea/
+# Arquivos de projeto do IntelliJ
 *.iml
+# Configurações do Eclipse
+.project
+.classpath
+.settings/
 
-# Logs
+# ===========================================
+# ARQUIVOS DE LOG E DEBUG
+# ===========================================
+# Arquivos de log gerados pela aplicação
 *.log
+# Arquivos de debug
+*.debug
 
-# Arquivos temporários
+# ===========================================
+# ARQUIVOS TEMPORÁRIOS
+# ===========================================
+# Arquivos temporários do sistema
 *.tmp
 *.temp
+# Arquivos de backup
+*.bak
+*.backup
+
+# ===========================================
+# ARQUIVOS DE CONFIGURAÇÃO LOCAL
+# ===========================================
+# Arquivos de configuração específicos do desenvolvedor
+config.local.properties
+application.local.yml
