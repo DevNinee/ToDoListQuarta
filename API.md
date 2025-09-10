@@ -1,4 +1,13 @@
-# Documentação da API - ToDoList
+# Documentação da API - Sistema ToDoList
+
+## Visão Geral
+Esta documentação descreve a API do sistema ToDoList, incluindo todos os métodos disponíveis na classe `TarefaServico`, padrões de design utilizados e sugestões para extensões futuras.
+
+## Índice
+1. [Classe TarefaServico](#classe-tarefaservico)
+   - [Métodos Disponíveis](#métodos-disponíveis)
+2. [Padrões de Design Utilizados](#padrões-de-design-utilizados)
+3. [Extensões Recomendadas](#extensões-recomendadas)
 
 ## Classe TarefaServico
 
