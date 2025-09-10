@@ -7,13 +7,11 @@ Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de conso
 
 | Membro | Funcionalidade | Status |
 |--------|----------------|--------|
-| **Erick Ferreira** | Criar Tarefa |  **Implementado** |
+| **Erick Ferreira** | Criar + Listar Tarefas |  **Implementado** |
 | **Fabiana Souza** | Marcar como Completa |  **Implementado** |
-| **Camile Felix** | Excluir Tarefa |  **Pendente** |
 | **Anna Beatriz** | Editar Tarefa |  **Pendente** |
-| **Emanoel Alexandri** | Sistema de Prioridades |  **Pendente** |
-| **Equipe** | Categorização |  **Pendente** |
-| **Equipe** | Persistência em Banco |  **Pendente** |
+| **Camile Felix** | Excluir Tarefa |  **Pendente** |
+| **Emanoel Alexandri** | Buscar Tarefa por ID |  **Pendente** |
 
 ## **Arquitetura**
 
@@ -43,13 +41,11 @@ src/
 
 ##  **Funcionalidades Implementadas**
 
-### **Criar Tarefa** (Erick Ferreira)
-- Adicionar nova tarefa com título e descrição
+### **Criar + Listar Tarefas** (Erick Ferreira)
+- **Criar**: Adicionar nova tarefa com título e descrição
+- **Listar**: Visualizar todas as tarefas cadastradas
 - Geração automática de ID incremental
 - Timestamp de criação automático
-
-### **Listar Tarefas** (Erick Ferreira)
-- Visualizar todas as tarefas cadastradas
 - Exibição formatada com ID, título, status e data
 - Mensagem quando não há tarefas
 
@@ -60,30 +56,21 @@ src/
 
 ##  **Funcionalidades Pendentes**
 
-### **Excluir Tarefa** (Camile Felix)
-- Remover tarefa do sistema permanentemente
-- Validação de existência antes da exclusão
-- Confirmação de exclusão
-
 ### **Editar Tarefa** (Anna Beatriz)
 - Modificar título e descrição de tarefas existentes
 - Validação de dados de entrada
 - Preservação de ID e data de criação
 
-### **Sistema de Prioridades** (Emanoel Alexandri)
-- Implementar níveis de prioridade (Alta, Média, Baixa)
-- Filtros por prioridade
-- Ordenação por prioridade
+### **Excluir Tarefa** (Camile Felix)
+- Remover tarefa do sistema permanentemente
+- Validação de existência antes da exclusão
+- Confirmação de exclusão
 
-### **Categorização** (Equipe)
-- Organizar tarefas por categorias
-- Filtros por categoria
-- Gerenciamento de categorias
-
-###  **Persistência em Banco** (Equipe)
-- Salvar dados em banco de dados
-- Migração de dados em memória
-- Backup e recuperação
+### **Buscar Tarefa por ID** (Emanoel Alexandri)
+- Localizar tarefa específica pelo ID
+- Exibição detalhada da tarefa encontrada
+- Validação de ID existente
+- Mensagem quando tarefa não é encontrada
 
 ## **Tecnologias Utilizadas**
 
@@ -185,7 +172,7 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 
 ## **Status do Projeto**
 
-- **Funcionalidades Implementadas**: 3/8
+- **Funcionalidades Implementadas**: 3/5
 - **Código Funcionando**: 
 - **Testes Realizados**: 
 - **Documentação**: 
@@ -199,11 +186,9 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 
 ## **Próximos Passos**
 
-1. **Camile**: Implementar funcionalidade de excluir tarefa
-2. **Anna**: Implementar funcionalidade de editar tarefa
-3. **Emanoel**: Implementar sistema de prioridades
-4. **Equipe**: Implementar sistema de categorização
-5. **Equipe**: Implementar persistência em banco
+1. **Anna**: Implementar funcionalidade de editar tarefa
+2. **Camile**: Implementar funcionalidade de excluir tarefa
+3. **Emanoel**: Implementar funcionalidade de buscar tarefa por ID
 
 ---
 
