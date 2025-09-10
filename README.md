@@ -1,9 +1,9 @@
 #  ToDoList - Sistema de Gerenciamento de Tarefas
 
-##  Descrição
+## Descrição
 Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. O projeto implementa funcionalidades básicas de CRUD para gerenciamento de tarefas pessoais.
 
-## 👥 **Equipe de Desenvolvimento**
+##  **Equipe de Desenvolvimento**
 
 | Membro | Funcionalidade | Status |
 |--------|----------------|--------|
@@ -15,7 +15,7 @@ Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de conso
 | **Equipe** | Categorização |  **Pendente** |
 | **Equipe** | Persistência em Banco |  **Pendente** |
 
-##  **Arquitetura**
+## **Arquitetura**
 
 O projeto segue uma arquitetura em camadas bem definida:
 
@@ -43,49 +43,49 @@ src/
 
 ##  **Funcionalidades Implementadas**
 
-###  **Criar Tarefa** (Erick Ferreira)
+### **Criar Tarefa** (Erick Ferreira)
 - Adicionar nova tarefa com título e descrição
 - Geração automática de ID incremental
 - Timestamp de criação automático
 
-###  **Listar Tarefas** (Erick Ferreira)
+### **Listar Tarefas** (Erick Ferreira)
 - Visualizar todas as tarefas cadastradas
 - Exibição formatada com ID, título, status e data
 - Mensagem quando não há tarefas
 
-###  **Marcar como Completa** (Fabiana Souza)
+### **Marcar como Completa** (Fabiana Souza)
 - Alterar status de tarefa de "Pendente" para "Completa"
 - Validação de existência da tarefa
 - Atualização em tempo real da listagem
 
 ##  **Funcionalidades Pendentes**
 
-###  **Excluir Tarefa** (Camile Felix)
+### **Excluir Tarefa** (Camile Felix)
 - Remover tarefa do sistema permanentemente
 - Validação de existência antes da exclusão
 - Confirmação de exclusão
 
-###  **Editar Tarefa** (Anna Beatriz)
+### **Editar Tarefa** (Anna Beatriz)
 - Modificar título e descrição de tarefas existentes
 - Validação de dados de entrada
 - Preservação de ID e data de criação
 
-###  **Sistema de Prioridades** (Emanoel Alexandri)
+### **Sistema de Prioridades** (Emanoel Alexandri)
 - Implementar níveis de prioridade (Alta, Média, Baixa)
 - Filtros por prioridade
 - Ordenação por prioridade
 
-###  **Categorização** (Equipe)
+### **Categorização** (Equipe)
 - Organizar tarefas por categorias
 - Filtros por categoria
 - Gerenciamento de categorias
 
-### ⏳ **Persistência em Banco** (Equipe)
+###  **Persistência em Banco** (Equipe)
 - Salvar dados em banco de dados
 - Migração de dados em memória
 - Backup e recuperação
 
-##  **Tecnologias Utilizadas**
+## **Tecnologias Utilizadas**
 
 - **Java**: Linguagem principal
 - **Java 8+**: Recursos como Streams e Optional
@@ -93,7 +93,7 @@ src/
 - **Git**: Controle de versão
 - **GitHub**: Repositório remoto
 
-##  **Como Executar**
+## **Como Executar**
 
 ### **1. Compilar o Projeto**
 ```bash
@@ -114,7 +114,7 @@ java -cp bin ucb.aplicacao.AppToDoList
 ./run.sh
 ```
 
-##  **Exemplo de Uso Completo**
+## **Exemplo de Uso Completo**
 
 ```
 ===== GERENCIADOR DE TAREFAS =====
@@ -159,7 +159,7 @@ Lista de Tarefas:
 ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 ```
 
-##  **Como Testar o Projeto**
+## **Como Testar o Projeto**
 
 ### **Teste 1: Criar Tarefa**
 1. Execute o programa
@@ -183,7 +183,7 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 2. Verifique mensagem de erro
 3. Teste com IDs inválidos
 
-##  **Status do Projeto**
+## **Status do Projeto**
 
 - **Funcionalidades Implementadas**: 3/8
 - **Código Funcionando**: 
@@ -191,13 +191,13 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 - **Documentação**: 
 - **Repositório Atualizado**: 
 
-##  **Links Úteis**
+## **Links Úteis**
 
 - **Repositório**: [https://github.com/DevNinee/ToDoListQuarta.git](https://github.com/DevNinee/ToDoListQuarta.git)
 - **Guia de Implementação**: `GUIA_IMPLEMENTACAO.md`
 - **Documentação da API**: `API.md`
 
-##  **Próximos Passos**
+## **Próximos Passos**
 
 1. **Camile**: Implementar funcionalidade de excluir tarefa
 2. **Anna**: Implementar funcionalidade de editar tarefa
