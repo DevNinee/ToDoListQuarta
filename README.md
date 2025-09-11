@@ -1,190 +1,185 @@
-#  ToDoList - Sistema de Gerenciamento de Tarefas
+# ToDoListQuarta - Sistema de Gerenciamento de Tarefas
 
 ## Descrição
-Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. O projeto implementa funcionalidades básicas de CRUD para gerenciamento de tarefas pessoais.
 
-##  **Equipe de Desenvolvimento**
+Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. Permite criar, listar, editar, excluir, buscar e marcar tarefas como concluídas, utilizando conceitos de POO e CRUD com armazenamento em memória.
 
-| Membro | Funcionalidade | Status |
-|--------|----------------|--------|
-| **Erick Ferreira** | Criar + Listar Tarefas + Excluir Tarefa|  **Implementado** |
-| **Fabiana Souza** | Marcar como Completa |  **Implementado** |
-| **Anna Beatriz** | Editar Tarefa |  **Implementado** |
-| **Camile Felix** | Editar Tarefa + Excluir Tarefa - menu e case|  **Implementado** |
-| **Emanoel Alexandri** | Buscar Tarefa por ID |  **Implementado** |
+---
 
-## **Arquitetura**
-
-O projeto segue uma arquitetura em camadas bem definida:
+## Estrutura do Projeto
 
 ```
-src/
-└── ucb/
-    ├── aplicacao/     # Camada de apresentação 
-    ├── model/         # Camada de modelo (entidades)
-    └── service/       # Camada de serviço 
+ToDoListQuarta/
+├── bin/                # Arquivos compilados (.class)
+├── src/                # Código-fonte Java
+│   └── ucb/
+│       ├── aplicacao/  # Interface CLI
+│       ├── model/      # Entidade Tarefa
+│       └── service/    # Lógica de negócio
+├── build.sh            # Script de compilação
+├── run.sh              # Script de execução
+├── README.md           # Documentação
 ```
 
-##  **Estrutura do Projeto**
+---
 
-### `ucb.aplicacao.AppToDoList`
-- **Responsabilidade**: Interface principal do usuário
-- **Funcionalidades**: Menu interativo com todas as operações
+## Pré-requisitos
 
-### `ucb.model.Tarefa`
-- **Responsabilidade**: Representa uma tarefa no sistema
-- **Atributos**: ID, título, descrição, status de conclusão, data de criação
+- Java 8 ou superior instalado
+- Git (opcional, para clonar o repositório)
 
-### `ucb.service.TarefaServico`
-- **Responsabilidade**: Lógica de negócio para gerenciamento de tarefas
-- **Funcionalidades**: CRUD completo, validações, gerenciamento de estado
+---
 
-##  **Funcionalidades Implementadas**
+## Como Configurar e Executar
 
-### **Criar + Listar Tarefas** (Erick Ferreira)
-- **Criar**: Adicionar nova tarefa com título e descrição
-- **Listar**: Visualizar todas as tarefas cadastradas
-- Geração automática de ID incremental
-- Timestamp de criação automático
-- Exibição formatada com ID, título, status e data
-- Mensagem quando não há tarefas
-- 
-### **Excluir Tarefa** (Erick)
-- Remover tarefa do sistema permanentemente
-- 
-### **Marcar como Completa** (Fabiana Souza)
-- Alterar status de tarefa de "Pendente" para "Completa"
-- Validação de existência da tarefa
-- Atualização em tempo real da listagem
+### 1. Clone o repositório (se necessário)
 
-### **Editar Tarefa** (Anna Beatriz)
-- Modificar título e descrição de tarefas existentes
-- Validação de dados de entrada
+```bash
+git clone https://github.com/DevNinee/ToDoListQuarta.git
+cd ToDoListQuarta
+```
 
-### **Editar Tarefa** (Camile Felix) 
-- Preservação de ID e data de criação
+### 2. Compile o projeto
 
-### **Excluir Tarefa** (Camile Felix)
-- Validação de existência antes da exclusão
-- Confirmação de exclusão
+Utilize o script de compilação:
 
-### **Buscar Tarefa por ID** (Emanoel Alexandri)
-- Implementar método buscarPorId no TarefaServico
-- Adicionar opção no menu CLI
-- Localizar tarefa específica pelo ID
-- Exibição detalhada da tarefa encontrada
-- Validação de ID existente
-- Mensagem quando tarefa não é encontrada
+```bash
+./build.sh
+```
 
-## **Tecnologias Utilizadas**
+Se preferir, compile manualmente:
 
-- **Java**: Linguagem principal
-- **Java 8+**: Recursos como Streams e Optional
-- **LocalDateTime**: Para timestamps das tarefas
-- **Git**: Controle de versão
-- **GitHub**: Repositório remoto
-
-## **Como Executar**
-
-### **1. Compilar o Projeto**
 ```bash
 javac -d bin src/ucb/**/*.java
 ```
 
-### **2. Executar a Aplicação**
+### 3. Execute o sistema
+
+Utilize o script de execução:
+
+```bash
+./run.sh
+```
+
+Ou execute manualmente:
+
 ```bash
 java -cp bin ucb.aplicacao.AppToDoList
 ```
 
-### **3. Usar Scripts (Opcional)**
-```bash
-# Compilar
-./build.sh
+---
 
-# Executar
-./run.sh
-```
-
-## **Exemplo de Uso Completo**
+## Exemplos de Uso
 
 ```
 ===== GERENCIADOR DE TAREFAS =====
 1. Criar Tarefa
 2. Listar Tarefas
 3. Marcar como Completa
-4. Sair
+4. Editar Tarefa
+5. Excluir Tarefa
+6. Sair
+7. Buscar Tarefa por ID
 Escolha uma opção: 1
 
 Título: Estudar Java
 Descrição: Revisar conceitos de POO
-Tarefa criada com sucesso: Estudar Java
+Tarefa criada com sucesso!
 
-===== GERENCIADOR DE TAREFAS =====
-1. Criar Tarefa
-2. Listar Tarefas
-3. Marcar como Completa
-4. Sair
 Escolha uma opção: 2
+ID: 1 | Título: Estudar Java | Status: Pendente | Data: 10/09/2025 14:30
 
-Lista de Tarefas:
-ID: 1 | Título: Estudar Java | Status: Pendente | Data: 15/06/2025 14:30
-
-===== GERENCIADOR DE TAREFAS =====
-1. Criar Tarefa
-2. Listar Tarefas
-3. Marcar como Completa
-4. Sair
 Escolha uma opção: 3
-
-Digite o ID da tarefa para marcar como completa: 1
+Digite o ID da tarefa: 1
 Tarefa marcada como completa!
-
-===== GERENCIADOR DE TAREFAS =====
-1. Criar Tarefa
-2. Listar Tarefas
-3. Marcar como Completa
-4. Sair
-Escolha uma opção: 2
-
-Lista de Tarefas:
-ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 ```
 
-## **Como Testar o Projeto**
+---
 
-### **Teste 1: Criar Tarefa**
-1. Execute o programa
-2. Escolha opção `1`
-3. Digite título e descrição
-4. Verifique mensagem de sucesso
+## Testes Sugeridos
 
-### **Teste 2: Listar Tarefas**
-1. Escolha opção `2`
-2. Verifique se a tarefa aparece com status "Pendente"
-3. Verifique formato da exibição
+- **Criar Tarefa:** Escolha opção 1, preencha os dados e verifique mensagem de sucesso.
+- **Listar Tarefas:** Escolha opção 2 e confira a listagem.
+- **Editar Tarefa:** Escolha opção 4, informe o ID e novos dados.
+- **Excluir Tarefa:** Escolha opção 5, informe o ID e confirme.
+- **Marcar como Completa:** Escolha opção 3, informe o ID.
+- **Buscar por ID:** Escolha opção 6, informe o ID.
+- **Validações:** Tente operações com IDs inexistentes e confira as mensagens de erro.
 
-### **Teste 3: Marcar como Completa**
-1. Escolha opção `3`
-2. Digite o ID da tarefa
-3. Verifique mensagem de sucesso
-4. Liste novamente para ver status "Completa"
+---
 
-### **Teste 4: Validações**
-1. Tente marcar tarefa inexistente
-2. Verifique mensagem de erro
-3. Teste com IDs inválidos
+## Scripts
 
-## **Status do Projeto**
+### build.sh
 
-- **Funcionalidades Implementadas**: 3/5
-- **Código Funcionando**: 
-- **Testes Realizados**: 
-- **Documentação**: 
-- **Repositório Atualizado**: 
+Compila todos os arquivos Java do projeto e cria o diretório `bin` automaticamente.
 
-## **Links Úteis**
+```bash
+#!/bin/bash
 
-- **Repositório**: [https://github.com/DevNinee/ToDoListQuarta.git](https://github.com/DevNinee/ToDoListQuarta.git)
+echo "🔨 Compilando projeto ToDoList..."
 
+mkdir -p bin
+javac -d bin src/ucb/**/*.java
 
-**Última atualização**: Setembro 2025 - Funcionalidade "Marcar como Completa" implementada por Fabiana Souza de Paula
+if [ $? -eq 0 ]; then
+    echo " Compilação realizada com sucesso!"
+    echo ""
+    echo " Para executar o projeto, use:"
+    echo "   java -cp bin ucb.aplicacao.AppToDoList"
+    echo ""
+    echo " Ou execute diretamente:"
+    echo "   ./run.sh"
+else
+    echo " Erro na compilação!"
+    exit 1
+fi
+```
+
+### run.sh
+
+Executa a aplicação principal do sistema.
+
+```bash
+#!/bin/bash
+
+echo "Iniciando Sistema ToDoList..."
+
+if [ ! -d "bin" ]; then
+    echo "Projeto não compilado! Execute primeiro:"
+    echo "   ./build.sh"
+    exit 1
+fi
+
+java -cp bin ucb.aplicacao.AppToDoList
+```
+
+---
+
+## Equipe de Desenvolvimento
+
+| Membro               | Funcionalidade                                 | Status         |
+|----------------------|------------------------------------------------|---------------|
+| **Erick Ferreira**   | Criar, Listar, Excluir Tarefas                 | Implementado  |
+| **Fabiana Souza**    | Marcar como Completa                           | Implementado  |
+| **Anna Beatriz**     | Editar Tarefa                                  | Implementado  |
+| **Camile Felix**     | Editar, Excluir Tarefa (menu/case)             | Implementado  |
+| **Emanoel Alexandri**| Buscar Tarefa por ID                           | Implementado  |
+
+---
+
+## Tecnologias Utilizadas
+
+- Java 8+
+- LocalDateTime
+- Git & GitHub
+
+---
+
+## Repositório
+
+[https://github.com/DevNinee/ToDoListQuarta.git](https://github.com/DevNinee/ToDoListQuarta.git)
+
+---
+
+**Última atualização:**
