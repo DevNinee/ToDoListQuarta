@@ -10,9 +10,8 @@ Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de conso
 | **Erick Ferreira** | Criar + Listar Tarefas + Excluir Tarefa|  **Implementado** |
 | **Fabiana Souza** | Marcar como Completa |  **Implementado** |
 | **Anna Beatriz** | Editar Tarefa |  **Pendente** |
-| **Camile Felix** | Editar Tarefa - parte 2|  **Pendente** |
+| **Camile Felix** | Editar Tarefa + Excluir Tarefa - menu e case|  **Pendente** |
 | **Emanoel Alexandri** | Buscar Tarefa por ID |  **Pendente** |
-|**Camile Felix** | Buscar Tarefa por ID - parte 2|  **Pendente** |
 
 ## **Arquitetura**
 
