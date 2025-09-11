@@ -55,6 +55,28 @@ public class TarefaServico {
         return false;
     }
 
+    // Método Editar tarefa no Tarefa Serviço
+    public class EditarTarefa {
+
+    private List<Tarefa> tarefas;
+    public EditarTarefa(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
+    }
+
+public boolean editarTarefa(Long id, String novoTitulo, String novaDescricao) {
+    Optional<Tarefa> tarefa = tarefas.stream()
+            .filter(t -> t.getId().equals(id))
+            .findFirst();
+
+    if (tarefa.isPresent()) {
+        Tarefa t = tarefa.get();
+        t.setTitulo(novoTitulo);
+        t.setDescricao(novaDescricao);
+        return true;
+    }
+    return false;
+}
+    
     // Método para verificar se a funcionalidade está funcionando
     public int totalTarefas() {
         return tarefas.size();
