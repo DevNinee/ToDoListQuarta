@@ -15,7 +15,8 @@ public class AppToDoList {
             System.out.println("1. Criar Tarefa");
             System.out.println("2. Listar Tarefas");
             System.out.println("3. Marcar como Completa");
-            System.out.println("4. Sair");
+            System.out.println("4. Excluir Tarefa");
+            System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = entrada.nextInt();
