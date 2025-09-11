@@ -11,7 +11,7 @@ Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de conso
 | **Fabiana Souza** | Marcar como Completa |  **Implementado** |
 | **Anna Beatriz** | Editar Tarefa |  **Implementado** |
 | **Camile Felix** | Editar Tarefa + Excluir Tarefa - menu e case|  **Implementado** |
-| **Emanoel Alexandri** | Buscar Tarefa por ID |  **Pendente** |
+| **Emanoel Alexandri** | Buscar Tarefa por ID |  **Implementado** |
 
 ## **Arquitetura**
 
@@ -48,21 +48,23 @@ src/
 - Timestamp de criação automático
 - Exibição formatada com ID, título, status e data
 - Mensagem quando não há tarefas
-
+- 
+### **Excluir Tarefa** (Erick)
+- Remover tarefa do sistema permanentemente
+- 
 ### **Marcar como Completa** (Fabiana Souza)
 - Alterar status de tarefa de "Pendente" para "Completa"
 - Validação de existência da tarefa
 - Atualização em tempo real da listagem
 
-##  **Funcionalidades Pendentes**
-
 ### **Editar Tarefa** (Anna Beatriz)
 - Modificar título e descrição de tarefas existentes
 - Validação de dados de entrada
+
+### **Editar Tarefa** (Camile Felix) 
 - Preservação de ID e data de criação
 
 ### **Excluir Tarefa** (Camile Felix)
-- Remover tarefa do sistema permanentemente
 - Validação de existência antes da exclusão
 - Confirmação de exclusão
 
@@ -183,15 +185,6 @@ ID: 1 | Título: Estudar Java | Status: Completa | Data: 15/06/2025 14:30
 ## **Links Úteis**
 
 - **Repositório**: [https://github.com/DevNinee/ToDoListQuarta.git](https://github.com/DevNinee/ToDoListQuarta.git)
-- **Guia de Implementação**: `GUIA_IMPLEMENTACAO.md`
-- **Documentação da API**: `API.md`
 
-## **Próximos Passos**
-
-1. **Anna**: Implementar funcionalidade de editar tarefa
-2. **Camile**: Implementar funcionalidade de excluir tarefa
-3. **Emanoel**: Implementar funcionalidade de buscar tarefa por ID
-
----
 
 **Última atualização**: Setembro 2025 - Funcionalidade "Marcar como Completa" implementada por Fabiana Souza de Paula
