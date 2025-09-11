@@ -58,7 +58,16 @@ public class AppToDoList {
                         System.out.println("Tarefa não encontrada!");
                     }
                 }
-                case 4 -> {
+                 case 4 -> {
+                    System.out.print("Digite o ID da tarefa para excluir: ");
+                    Long idExcluir = entrada.nextLong();
+
+                    if (servico.removerTarefa(idExcluir)) {
+                        System.out.println("Tarefa excluída com sucesso!");
+                    } else {
+                        System.out.println("Tarefa não encontrada!");
+                    }
+                case 5 -> {
                     System.out.println("Saindo do sistema...");
                     entrada.close();
                     return;
