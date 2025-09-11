@@ -76,7 +76,15 @@ public boolean editarTarefa(Long id, String novoTitulo, String novaDescricao) {
     }
     return false;
 }
-    
+    // Buscar tarefa por ID
+    public Tarefa buscarPorId(Long id) {
+        return tarefas.stream()
+                .filter(t -> t.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+]
+        
     // Método para verificar se a funcionalidade está funcionando
     public int totalTarefas() {
         return tarefas.size();
