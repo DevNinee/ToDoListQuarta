@@ -16,7 +16,8 @@ public class AppToDoList {
             System.out.println("2. Listar Tarefas");
             System.out.println("3. Marcar como Completa");
             System.out.println("4. Excluir Tarefa");
-            System.out.println("5. Sair");
+            System.out.println("5. Editar Tarefa");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = entrada.nextInt();
@@ -68,7 +69,24 @@ public class AppToDoList {
                     } else {
                         System.out.println("Tarefa não encontrada!");
                     }
+                // Adicionar no switch
                 case 5 -> {
+                    System.out.print("Digite o ID da tarefa para editar: ");
+                    Long idEditar = entrada.nextLong();
+                    entrada.nextLine(); // consumir quebra de linha
+                
+                    System.out.print("Novo título: ");
+                    String novoTitulo = entrada.nextLine();
+                    System.out.print("Nova descrição: ");
+                    String novaDescricao = entrada.nextLine();
+                
+                    if (servico.editarTarefa(idEditar, novoTitulo, novaDescricao)) {
+                        System.out.println("Tarefa editada com sucesso!");
+                    } else {
+                        System.out.println("Tarefa não encontrada!");
+                    }
+                }
+                case 6 -> {
                     System.out.println("Saindo do sistema...");
                     entrada.close();
                     return;
