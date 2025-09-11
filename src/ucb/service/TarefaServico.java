@@ -9,40 +9,40 @@ public class TarefaServico {
     private List<Tarefa> tarefas = new ArrayList<>();
     private Long contadorId = 1L;
 
-    // Criar tarefa
+    // Criar uma nova tarefa
     public Tarefa criarTarefa(String titulo, String descricao) {
         Tarefa nova = new Tarefa(titulo, descricao);
-        nova.setId(contadorId++); // gera ID incremental
-        tarefas.add(nova);
+        nova.setId(contadorId++); // gera um número de ID para a tarefa
+        tarefas.add(nova); // adiciona na lista
         return nova;
     }
 
-    // Listar tarefas
+    // Mostrar todas as tarefas
     public List<Tarefa> listarTarefas() {
-        return new ArrayList<>(tarefas); // retorna uma cópia para evitar modificações externas
+        return new ArrayList<>(tarefas); // retorna a lista
     }
 
-    // Atualizar tarefa (CRUD - Update)
-    public boolean atualizarTarefa(Long id, String novoTitulo, String novaDescricao) {
+    // Editar uma tarefa já criada
+    public boolean editarTarefa(Long id, String novoTitulo, String novaDescricao) {
         Optional<Tarefa> tarefa = tarefas.stream()
-                .filter(t -> t.getId().equals(id))
+                .filter(t -> t.getId().equals(id)) // procura pela tarefa com o ID
                 .findFirst();
         
         if (tarefa.isPresent()) {
             Tarefa t = tarefa.get();
             t.setTitulo(novoTitulo);
             t.setDescricao(novaDescricao);
-            return true;
+            return true; // deu certo
         }
-        return false;
+        return false; // não encontrou a tarefa
     }
 
-    // Remover tarefa (CRUD - Delete)
+    // Apagar uma tarefa
     public boolean removerTarefa(Long id) {
         return tarefas.removeIf(t -> t.getId().equals(id));
     }
 
-    // Marcar tarefa como completa
+    // Marcar uma tarefa como concluída
     public boolean marcarComoCompleta(Long id) {
         Optional<Tarefa> tarefa = tarefas.stream()
                 .filter(t -> t.getId().equals(id))
@@ -55,29 +55,15 @@ public class TarefaServico {
         return false;
     }
 
-    // Método Editar tarefa no Tarefa Serviço
-public boolean editarTarefa(Long id, String novoTitulo, String novaDescricao) {
-    Optional<Tarefa> tarefa = tarefas.stream()
-            .filter(t -> t.getId().equals(id))
-            .findFirst();
-    if (tarefa.isPresent()) {
-        Tarefa t = tarefa.get();
-        t.setTitulo(novoTitulo);
-        t.setDescricao(novaDescricao);
-        return true;
-    }
-    return false;
-}
-    // Buscar tarefa por ID
+    // Procurar tarefa pelo ID
     public Tarefa buscarPorId(Long id) {
         return tarefas.stream()
                 .filter(t -> t.getId().equals(id))
                 .findFirst()
                 .orElse(null);
     }
-]
-        
-    // Método para verificar se a funcionalidade está funcionando
+
+    // Contar quantas tarefas existem
     public int totalTarefas() {
         return tarefas.size();
     }
