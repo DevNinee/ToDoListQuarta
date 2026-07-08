@@ -1,185 +1,249 @@
-# ToDoListQuarta - Sistema de Gerenciamento de Tarefas
+# ToDoListQuarta
 
-## Descrição
-
-Sistema de gerenciamento de tarefas desenvolvido em Java, com interface de console interativa. Permite criar, listar, editar, excluir, buscar e marcar tarefas como concluídas, utilizando conceitos de POO e CRUD com armazenamento em memória.
+[Português (PT-BR)](#português-pt-br) | [English (EN)](#english-en)
 
 ---
 
-## Estrutura do Projeto
+## Português (PT-BR)
 
-```
+Sistema de gerenciamento de tarefas em Java com interface de linha de comando (CLI), desenvolvido para organizar atividades e praticar Programação Orientada a Objetos.
+
+### Objetivo
+
+O projeto resolve a necessidade de controle simples de tarefas (criar, acompanhar, concluir, editar e excluir) e serve como base prática de aprendizagem em Java.
+
+### Problema que resolve
+
+- Falta de organização de tarefas no dia a dia
+- Dificuldade de acompanhar status de atividades
+- Necessidade de um projeto acadêmico com aplicação real de POO
+
+### Funcionalidades
+
+- Criar tarefa
+- Listar tarefas
+- Editar tarefa
+- Excluir tarefa
+- Marcar tarefa como concluída
+- Buscar tarefa por ID
+
+### Diferenciais
+
+- Estrutura organizada por camadas (`aplicacao`, `model`, `service`)
+- Fluxo completo de CRUD
+- Código simples para manutenção e evolução
+- Scripts prontos para compilação e execução
+
+### Tecnologias
+
+- Java 8+
+- POO
+- LocalDateTime
+- Shell Script (`build.sh`, `run.sh`)
+- Git e GitHub
+
+### Estrutura do projeto
+
+```text
 ToDoListQuarta/
-├── bin/                # Arquivos compilados (.class)
-├── src/                # Código-fonte Java
+├── bin/
+├── src/
 │   └── ucb/
-│       ├── aplicacao/  # Interface CLI
-│       ├── model/      # Entidade Tarefa
-│       └── service/    # Lógica de negócio
-├── build.sh            # Script de compilação
-├── run.sh              # Script de execução
-├── README.md           # Documentação
+│       ├── aplicacao/
+│       ├── model/
+│       └── service/
+├── build.sh
+├── run.sh
+└── README.md
 ```
 
----
-
-## Pré-requisitos
-
-- Java 8 ou superior instalado
-- Git (opcional, para clonar o repositório)
-
----
-
-## Como Configurar e Executar
-
-### 1. Clone o repositório (se necessário)
+### Como executar
 
 ```bash
 git clone https://github.com/DevNinee/ToDoListQuarta.git
 cd ToDoListQuarta
-```
-
-### 2. Compile o projeto
-
-Utilize o script de compilação:
-
-```bash
 ./build.sh
-```
-
-Se preferir, compile manualmente:
-
-```bash
-javac -d bin src/ucb/**/*.java
-```
-
-### 3. Execute o sistema
-
-Utilize o script de execução:
-
-```bash
 ./run.sh
 ```
 
-Ou execute manualmente:
+Execução manual:
 
 ```bash
+javac -d bin src/ucb/**/*.java
 java -cp bin ucb.aplicacao.AppToDoList
 ```
 
----
+### Exemplo de uso
 
-## Exemplos de Uso
-
-```
-===== GERENCIADOR DE TAREFAS =====
+```text
 1. Criar Tarefa
 2. Listar Tarefas
 3. Marcar como Completa
 4. Editar Tarefa
 5. Excluir Tarefa
-6. Sair
-7. Buscar Tarefa por ID
-Escolha uma opção: 1
-
-Título: Estudar Java
-Descrição: Revisar conceitos de POO
-Tarefa criada com sucesso!
-
-Escolha uma opção: 2
-ID: 1 | Título: Estudar Java | Status: Pendente | Data: 10/09/2025 14:30
-
-Escolha uma opção: 3
-Digite o ID da tarefa: 1
-Tarefa marcada como completa!
+6. Buscar Tarefa por ID
+7. Sair
 ```
 
+### API (evolução futura)
+
+Base pronta para API REST com endpoints como:
+
+- GET /tarefas
+- GET /tarefas/{id}
+- POST /tarefas
+- PUT /tarefas/{id}
+- PATCH /tarefas/{id}/concluir
+- DELETE /tarefas/{id}
+
+### Melhorias futuras
+
+- Persistência em banco de dados
+- Testes automatizados (JUnit)
+- Validações e tratamento de exceções
+- Prioridade/categorias de tarefas
+- Interface web ou mobile
+- Autenticação de usuários
+
+### Possíveis projetos derivados
+
+- ToDoList Web
+- App mobile de tarefas
+- Kanban colaborativo
+- Agenda acadêmica
+- Gerenciador de metas pessoais
+
+### Equipe
+
+- Camile Felix
+- Fabiana Souza
+- Erick Ferreira
+- Anna Beatriz
+- Emanoel Alexandri
+
+### Repositório
+
+https://github.com/DevNinee/ToDoListQuarta
+
 ---
 
-## Testes Sugeridos
+## English (EN)
 
-- **Criar Tarefa:** Escolha opção 1, preencha os dados e verifique mensagem de sucesso.
-- **Listar Tarefas:** Escolha opção 2 e confira a listagem.
-- **Editar Tarefa:** Escolha opção 4, informe o ID e novos dados.
-- **Excluir Tarefa:** Escolha opção 5, informe o ID e confirme.
-- **Marcar como Completa:** Escolha opção 3, informe o ID.
-- **Buscar por ID:** Escolha opção 6, informe o ID.
-- **Validações:** Tente operações com IDs inexistentes e confira as mensagens de erro.
+Java task management system with a command-line interface (CLI), created to organize daily activities and practice Object-Oriented Programming concepts.
 
----
+### Objective
 
-## Scripts
+This project addresses the need for simple task control (create, track, complete, edit, and delete tasks) and serves as a practical Java learning base.
 
-### build.sh
+### Problem it solves
 
-Compila todos os arquivos Java do projeto e cria o diretório `bin` automaticamente.
+- Lack of day-to-day task organization
+- Difficulty tracking task status
+- Need for an academic project with real OOP application
+
+### Features
+
+- Create task
+- List tasks
+- Edit task
+- Delete task
+- Mark task as completed
+- Search task by ID
+
+### Key differentiators
+
+- Well-structured layered architecture (`aplicacao`, `model`, `service`)
+- Full CRUD flow
+- Simple and maintainable codebase
+- Ready-to-use build and run scripts
+
+### Technologies
+
+- Java 8+
+- OOP
+- LocalDateTime
+- Shell Script (`build.sh`, `run.sh`)
+- Git and GitHub
+
+### Project structure
+
+```text
+ToDoListQuarta/
+├── bin/
+├── src/
+│   └── ucb/
+│       ├── aplicacao/
+│       ├── model/
+│       └── service/
+├── build.sh
+├── run.sh
+└── README.md
+```
+
+### How to run
 
 ```bash
-#!/bin/bash
+git clone https://github.com/DevNinee/ToDoListQuarta.git
+cd ToDoListQuarta
+./build.sh
+./run.sh
+```
 
-echo "🔨 Compilando projeto ToDoList..."
+Manual execution:
 
-mkdir -p bin
+```bash
 javac -d bin src/ucb/**/*.java
-
-if [ $? -eq 0 ]; then
-    echo " Compilação realizada com sucesso!"
-    echo ""
-    echo " Para executar o projeto, use:"
-    echo "   java -cp bin ucb.aplicacao.AppToDoList"
-    echo ""
-    echo " Ou execute diretamente:"
-    echo "   ./run.sh"
-else
-    echo " Erro na compilação!"
-    exit 1
-fi
-```
-
-### run.sh
-
-Executa a aplicação principal do sistema.
-
-```bash
-#!/bin/bash
-
-echo "Iniciando Sistema ToDoList..."
-
-if [ ! -d "bin" ]; then
-    echo "Projeto não compilado! Execute primeiro:"
-    echo "   ./build.sh"
-    exit 1
-fi
-
 java -cp bin ucb.aplicacao.AppToDoList
 ```
 
----
+### Usage example
 
-## Equipe de Desenvolvimento
+```text
+1. Create Task
+2. List Tasks
+3. Mark as Complete
+4. Edit Task
+5. Delete Task
+6. Search Task by ID
+7. Exit
+```
 
-| Membro               | Funcionalidade                                 | Status         |
-|----------------------|------------------------------------------------|---------------|
-| **Erick Ferreira**   | Criar, Listar, Excluir Tarefas                 | Implementado  |
-| **Fabiana Souza**    | Marcar como Completa                           | Implementado  |
-| **Anna Beatriz**     | Editar Tarefa                                  | Implementado  |
-| **Camile Felix**     | Editar, Excluir Tarefa (menu/case)             | Implementado  |
-| **Emanoel Alexandri**| Buscar Tarefa por ID                           | Implementado  |
+### API (future evolution)
 
----
+The project is ready to evolve into a REST API with endpoints such as:
 
-## Tecnologias Utilizadas
+- GET /tasks
+- GET /tasks/{id}
+- POST /tasks
+- PUT /tasks/{id}
+- PATCH /tasks/{id}/complete
+- DELETE /tasks/{id}
 
-- Java 8+
-- LocalDateTime
-- Git & GitHub
+### Future improvements
 
----
+- Database persistence
+- Automated tests (JUnit)
+- Better input validation and exception handling
+- Task priorities/categories
+- Web or mobile interface
+- User authentication
 
-## Repositório
+### Possible derived projects
 
-[https://github.com/DevNinee/ToDoListQuarta.git](https://github.com/DevNinee/ToDoListQuarta.git)
+- ToDoList Web
+- Mobile task manager app
+- Collaborative Kanban board
+- Academic planner
+- Personal goals tracker
 
----
+### Team
 
-**Última atualização:**
+- Camile Felix
+- Fabiana Souza
+- Erick Ferreira
+- Anna Beatriz
+- Emanoel Alexandri
+
+### Repository
+
+https://github.com/DevNinee/ToDoListQuarta
